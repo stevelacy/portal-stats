@@ -1,18 +1,16 @@
 $(document).ready(function(){
 
 
-var fission = parent.fission;
+var portal = parent.fission;
 
 var widget = function(){
-  fission.socket.emit('test', {data:'test'});
-  fission.socket.on('test', function(data){
+  portal.socket.emit('test', {data:'test'});
+  portal.socket.on('test', function(data){
     console.log(data);
   });
 };
 
 widget();
-
-
 
 
 
@@ -56,7 +54,7 @@ mem = window.chart = $('.mem').data('easyPieChart');
 cpu.update(100);
 mem.update(100);
 
-fission.socket.on('graphs', function(data){
+portal.socket.on('graphs', function(data){
   console.log(data);
   cpu.update(Number(data.process.cpu));
   mem.update(Number(data.process.mem));
