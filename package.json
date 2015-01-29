@@ -1,0 +1,20 @@
+{
+  "name": "portal-stats",
+  "description": "Stats Plugin for PORTAL",
+  "dependencies": {
+    "lodash": "*",
+    "usage": "^0.4.13"
+  },
+  "portal": {
+    "main": "plugin.coffee",
+    "script": "simple.js",
+    "style": "plugin.css",
+    "html": "plugin.html",
+    "widget": {
+      "name": "Statistics",
+      "main": "widget.js",
+      "html": "widget.html",
+      "size": "medium"
+    }
+  }
+}
