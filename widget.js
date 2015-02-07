@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-var portal = parent.fission;
+var portal = parent;
 
 var widget = function(){
   portal.socket.emit('test', {data:'test'});
