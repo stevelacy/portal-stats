@@ -1,20 +1,34 @@
 {
   "name": "portal-stats",
-  "description": "Stats Plugin for PORTAL",
-  "dependencies": {
-    "lodash": "*",
-    "usage": "^0.4.13"
-  },
   "portal": {
-    "main": "plugin.coffee",
+    "main": "index.js",
     "script": "simple.js",
     "style": "plugin.css",
     "html": "plugin.html",
     "widget": {
-      "name": "Statistics",
-      "main": "widget.js",
-      "html": "widget.html",
+      "name": "Rialu",
+      "main": "widget/widget.js",
+      "html": "widget/index.html",
       "size": "medium"
     }
+  },
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "coffee-script": "^1.9.0",
+    "coffeeify": "^1.0.0",
+    "fission": "fissionjs/fission#new-router",
+    "gulp": "^3.8.11",
+    "gulp-autowatch": "0.0.1",
+    "gulp-jade": "^0.11.0",
+    "gulp-livereload": "^3.7.0",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-stylus": "^2.0.0",
+    "react": "^0.12.1",
+    "socket.io-client": "^1.3.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "usage": "^0.5.0"
   }
 }
