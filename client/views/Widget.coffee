@@ -16,8 +16,6 @@ module.exports = view
 
   mounted: ->
 
-    console.log @refs
-
     cpu = new easypiechart @refs.cpu.getDOMNode(),
       animate: 2000
       easing: 'easeOutBounce'
@@ -38,8 +36,6 @@ module.exports = view
       rotate: 180
     mem.update 100
 
-
-
     client.on 'connect', ->
 
       client.emit 'plugin:stats:connect'
@@ -48,11 +44,11 @@ module.exports = view
       mem.update data.process.mem
 
   render: ->
-    DOM.h1 null, 'test'
-    DOM.div
-      ref: 'cpu'
-      className: 'cpu'
+    DOM.div className: 'widget',
+      DOM.div
+        ref: 'cpu'
+        className: 'cpu'
 
-    DOM.div
-      ref: 'mem'
-      className: 'mem'
+      DOM.div
+        ref: 'mem'
+        className: 'mem'
