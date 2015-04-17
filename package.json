@@ -2,15 +2,13 @@
   "name": "portal-stats",
   "portal": {
     "main": "index.js",
-    "script": "simple.js",
-    "style": "plugin.css",
-    "html": "plugin.html",
-    "widget": {
-      "name": "Rialu",
-      "main": "widget/widget.js",
-      "html": "widget/index.html",
-      "size": "medium"
-    }
+    "name": "Stats",
+    "html": "widget/index.html",
+    "size": "medium"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.1",
+    "usage": "^0.5.0"
   },
   "devDependencies": {
     "browserify": "^8.1.3",
@@ -23,12 +21,8 @@
     "gulp-livereload": "^3.7.0",
     "gulp-sourcemaps": "^1.3.0",
     "gulp-stylus": "^2.0.0",
-    "react": "^0.12.1",
     "socket.io-client": "^1.3.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0"
-  },
-  "dependencies": {
-    "usage": "^0.5.0"
   }
 }
