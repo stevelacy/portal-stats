@@ -1,7 +1,7 @@
 io = require 'socket.io-client'
 {view, DOM} = require 'fission'
 
-easypiechart = require '../vendor/easypiechart'
+easypiechart = require 'easy-pie-chart'
 
 token = parent.token
 client = io parent.config.socketUrl,
